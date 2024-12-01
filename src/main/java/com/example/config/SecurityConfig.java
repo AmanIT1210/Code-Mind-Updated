@@ -38,8 +38,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/authenticate").permitAll() // Ensure this is present
-                .anyRequest().authenticated() // All other endpoints require authentication
+                .requestMatchers("/authenticate","/api/auth/register").permitAll() //
+                .anyRequest().authenticated() 
             )
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 

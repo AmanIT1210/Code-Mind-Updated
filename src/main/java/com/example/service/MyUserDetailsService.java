@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.model.User;
 import com.example.repository.UserRepository;
-//import com.example.model.User as CustomUser; // Alias for your custom User entity
 
 import java.util.stream.Collectors;
 import java.util.Arrays;

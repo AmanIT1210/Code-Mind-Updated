@@ -28,6 +28,7 @@ public class UserController {
         }
     }
 
+
     @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody User user) {
         User existingUser = userService.findByUsername(user.getUsername());

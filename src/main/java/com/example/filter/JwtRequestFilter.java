@@ -28,10 +28,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
-        // Log the incoming request URI
+        
         System.out.println("Processing request: " + request.getRequestURI());
 
-        // Skip the filter for /authenticate
+        
         String requestURI = request.getRequestURI();
         if ("/authenticate".equals(requestURI)) {
             filterChain.doFilter(request, response);
